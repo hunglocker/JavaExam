@@ -27,6 +27,8 @@ public class main {
                      break;
                  case 3:FindMax();
                  break;
+                 case 4:ShowValues();
+                 break;
              }
          } while(choice != 0);
 
@@ -61,6 +63,15 @@ public class main {
            }
            System.out.println("Giá trị lớn nhất " + max);
     }
+    public static void ShowValues() {
+          if(list.isEmpty()) {
+              System.out.println("Danh sách đang trống");
+          }
+          else {
+              System.out.println("TRong list gồm các giá trị " + list + ";");
+          }
+    }
+
 
 //
 //
