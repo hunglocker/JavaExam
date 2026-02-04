@@ -25,7 +25,8 @@ public class main {
                      break;
                  case 2: Sum();
                      break;
-
+                 case 3:FindMax();
+                 break;
              }
          } while(choice != 0);
 
@@ -53,6 +54,14 @@ public class main {
              System.out.println("Tổng các số của chuỗi là " + sum);
          }
     }
+    public static void FindMax() {
+           int max = list.get(0);
+           for(int i = 1 ; i < list.size(); i++) {
+               max = list.get(i);
+           }
+           System.out.println("Giá trị lớn nhất " + max);
+    }
+
 //
 //
 //
