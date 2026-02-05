@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,6 +31,8 @@ public class main {
                  case 3:FindMax();
                  break;
                  case 4:ShowValues();
+                 break;
+                 case 5: ReadXml();
                  break;
              }
          } while(choice != 0);
@@ -71,11 +76,23 @@ public class main {
               System.out.println("TRong list gồm các giá trị " + list + ";");
           }
     }
+    public static void ReadXml() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.xml"))) {
+            System.out.println("Lưu thành công");
+
+            if (!list.isEmpty()) {
+                writer.write("Lưu thông tin vào xml " + list.toString());
+            } else {
+                writer.write("Hiện tại trong mảng không có giá trị");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 //
 //
 //
-
+    }
 
 }
